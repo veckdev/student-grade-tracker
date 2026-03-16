@@ -33,13 +33,13 @@ class TestClassify:
 class TestStudentAverages:
 
     def test_subject_average(self):
-        s = Student(name="Victor", student_id="A001")
+        s = Student(name="Victor", student_id="V001")
         s.add_grade(Grade(subject="Math", value=80.0))
         s.add_grade(Grade(subject="Math", value=90.0))
         assert subject_average(s, "Math") == 85.0
 
     def test_overall_average(self):
-        s = Student(name="Victor", student_id="A001")
+        s = Student(name="Victor", student_id="V001")
         s.add_grade(Grade(subject="Math", value=80.0))
         s.add_grade(Grade(subject="History", value=60.0))
         assert overall_average(s) == 70.0

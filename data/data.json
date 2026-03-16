@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Victor Silva",
+    "student_id": "V001",
+    "grades": [
+      {
+        "subject": "Math",
+        "value": 85.0,
+        "date": "2026-03-16"
+      },
+      {
+        "subject": "History",
+        "value": 72.0,
+        "date": "2026-03-16"
+      },
+      {
+        "subject": "Science",
+        "value": 91.0,
+        "date": "2026-03-16"
+      }
+    ]
+  }
+]

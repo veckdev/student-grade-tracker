@@ -29,26 +29,26 @@ class TestGrade:
 class TestStudent:
 
     def test_valid_student_is_created(self):
-        s = Student(name="Victor da Silva", student_id="A001")
+        s = Student(name="Victor da Silva", student_id="V001")
         assert s.name == "Victor da Silva"
         assert s.grades == []
 
     def test_raises_on_empty_name(self):
         with pytest.raises(ValueError):
-            Student(name="", student_id="A001")
+            Student(name="", student_id="V001")
 
     def test_raises_on_empty_id(self):
         with pytest.raises(ValueError):
             Student(name="Victor", student_id="")
 
     def test_add_grade(self):
-        s = Student(name="Victor", student_id="A001")
+        s = Student(name="Victor", student_id="V001")
         g = Grade(subject="Math", value=85.0)
         s.add_grade(g)
         assert len(s.grades) == 1
 
     def test_grades_for_filters_by_subject(self):
-        s = Student(name="Victor", student_id="A001")
+        s = Student(name="Victor", student_id="V001")
         s.add_grade(Grade(subject="Math", value=80.0))
         s.add_grade(Grade(subject="History", value=70.0))
         s.add_grade(Grade(subject="Math", value=90.0))

@@ -47,3 +47,15 @@ class Student:
     def grades_for(self, subject: str) -> list[Grade]:
         """Return all grades for a given subject (case-insensitive)."""
         return [g for g in self.grades if g.subject.lower() == subject.lower()]
+
+    @property
+    def subjects(self) -> list[str]:
+        """Return unique subjects in order of first appearance."""
+        seen: set[str] = set()
+        result: list[str] = []
+        for g in self.grades:
+            key = g.subject.lower()
+            if key not in seen:
+                seen.add(key)
+                result.append(g.subject)
+        return result
